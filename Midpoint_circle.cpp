@@ -3,21 +3,13 @@
 
 void plotCirclePoints(int x1, int y1, int x, int y){
     putpixel(x1 + x, y1 + y, RED);
-    delay(10);
     putpixel(x1 - x, y1 + y, RED);
-    delay(10);
     putpixel(x1 + x, y1 - y, RED);
-    delay(10);
     putpixel(x1 - x, y1 - y, RED);
-    delay(10);
     putpixel(x1 + y, y1 + x, RED);
-    delay(10);
     putpixel(x1 - y, y1 + x, RED);
-    delay(10);
     putpixel(x1 + y, y1 - x, RED);
-    delay(10);
     putpixel(x1 - y, y1 - x, RED);
-    delay(10);
 }
 
 

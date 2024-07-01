@@ -38,37 +38,6 @@ void translate(float x1, float y1, float x2, float y2, float x3, float y3, float
     line(C3[0], C3[1], C1[0], C1[1]);
 }
 
-// void rotate(float x1, float y1, float x2, float y2, float x3, float y3, double thetad) {
-//     double theta = thetad * (M_PI / 180.0);
-//     float a=cos(theta);
-//     float b= sin(theta);
-//     float A[3][3] = {
-//         {a, -b, 0},
-//         {b, a, 0},
-//         {0, 0, 1}
-//     };
-    
-//     float B1[3] = {x1, y1, 1};
-//     float B2[3] = {x2, y2, 1};
-//     float B3[3] = {x3, y3, 1};
-    
-//     float C1[3], C2[3], C3[3];
-    
-//     matrix_multiplication(A, B1, C1);
-//     matrix_multiplication(A, B2, C2);
-//     matrix_multiplication(A, B3, C3);
-    
-//     setcolor(RED);
-//     line(x1, y1, x2, y2);
-//     line(x2, y2, x3, y3);
-//     line(x3, y3, x1, y1);
-    
-//     setcolor(GREEN);
-//     line(C1[0], C1[1], C2[0], C2[1]);
-//     line(C2[0], C2[1], C3[0], C3[1]);
-//     line(C3[0], C3[1], C1[0], C1[1]);
-// }
-
 void rotate(float x1, float y1, float x2, float y2, float x3, float y3, double thetad) {
 
     float cx = (x1 + x2 + x3) / 3;
@@ -111,33 +80,7 @@ void rotate(float x1, float y1, float x2, float y2, float x3, float y3, double t
     line(rx2, ry2, rx3, ry3);
     line(rx3, ry3, rx1, ry1);
 }
-
-// void scale(float x1, float y1, float x2, float y2, float x3, float y3, float sx, float sy) {
-//     float A[3][3] = {
-//         {sx, 0, 0},
-//         {0, sy, 0},
-//         {0, 0, 1}
-//     };
-    
-//     float B1[3] = {x1, y1, 1};
-//     float B2[3] = {x2, y2, 1};
-//     float B3[3] = {x3, y3, 1};  
-//     float C1[3], C2[3], C3[3];
-    
-//     matrix_multiplication(A, B1, C1);
-//     matrix_multiplication(A, B2, C2);
-//     matrix_multiplication(A, B3, C3);
-    
-//     setcolor(RED);
-//     line(x1, y1, x2, y2);
-//     line(x2, y2, x3, y3);
-//     line(x3, y3, x1, y1);
-    
-//     setcolor(GREEN);
-//     line(C1[0], C1[1], C2[0], C2[1]);
-//     line(C2[0], C2[1], C3[0], C3[1]);
-//     line(C3[0], C3[1], C1[0], C1[1]);
-// } 
+ 
 
 void scale(float x1, float y1, float x2, float y2, float x3, float y3, float sx, float sy) {
     float cx = (x1 + x2 + x3) / 3;
@@ -178,6 +121,7 @@ void scale(float x1, float y1, float x2, float y2, float x3, float y3, float sx,
     line(rx3, ry3, rx1, ry1);
 } 
 
+
 int main() {
     int gd = DETECT, gm;
     initgraph(&gd, &gm, NULL);
@@ -190,4 +134,3 @@ int main() {
     closegraph();
     return 0;
 }
-
